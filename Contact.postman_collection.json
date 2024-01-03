@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "626d0aa3-781c-4f4d-86d4-22e12d333c25",
+		"name": "Contact",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29477862"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ContactName\":\"Monir\",\r\n    \"ContactEmail\":\"moniruzzaman.ict.mbstu@gamilcom\",\r\n    \"Phone\":\"01949968118\",\r\n    \"Address\":\"Tangail\",\r\n    \"Picture\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlGE2ppB2uVmgdk7PMOIShoG46xgpOUseBHrKmBAhc2Q&s\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/createContact",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"createContact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}/readContact",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"readContact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseURL}}//readContactById/6594069e4039571b9718cde2",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"",
+						"readContactById",
+						"6594069e4039571b9718cde2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "http://localhost:5000/api/v1",
+			"type": "string"
+		}
+	]
+}
